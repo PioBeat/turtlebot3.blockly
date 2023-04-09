@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Python libs
 import sys, time
@@ -39,7 +39,7 @@ class web_video_server:
         self.subscriber = rospy.Subscriber(topic_name,
             CompressedImage, self.callback,  queue_size = 1)
         if VERBOSE :
-            print "subscribed to " + topic_name
+            print("Subscribed to " + topic_name)
 
     def getCompressedImage(self):
         mutex.acquire(1)
@@ -93,8 +93,8 @@ class MyHandler(BaseHTTPRequestHandler):
                 return
             return
         except IOError:
-            self.send_error(404,'File Not Found: %s' % self.path)
-        except :
+            self.send_error(404, 'File Not Found: %s' % self.path)
+        except:
             pass
 
 class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
@@ -104,21 +104,21 @@ def main_server(args, ic):
     try:
         MyHandler.ic = ic
         server = ThreadedHTTPServer(('0.0.0.0', 8080), MyHandler)
-        print 'started httpserver...'
+        print("Started HTTP server...")
         server.serve_forever()
     except KeyboardInterrupt:
-        print '^C received, shutting down server'
+        print("^C received, shutting down server")
         server.socket.close()  
 
 
 def main_ros(args):
     '''Initializes and cleanup ros node'''
     rospy.init_node('web_video_server', anonymous=False)
-    print 'started ROS...'
+    print("Started ROS...")
     try:
         rospy.spin()
     except KeyboardInterrupt:
-        print "Shutting down ROS Image feature detector module"
+        print("Shutting down ROS Image feature detector module")
     cv2.destroyAllWindows()
 
 if __name__ == '__main__':
