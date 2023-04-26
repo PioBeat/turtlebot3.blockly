@@ -110,13 +110,13 @@ http://127.0.0.1:1036
 To start the Gazebo simulator with the standard TB3 world, open a new terminal and enter the following commands:
 
 ```shell
-$ cd ~/catkin_ws_tb3
-$ source devel/setup.sh
-$ export TURTLEBOT3_MODEL=waffle_pi
 $ rosparam set use_sim_time true
 $ roslaunch turtlebot3_gazebo turtlebot3_world.launch
-
 ```
+
+[//]: # ($ cd ~/catkin_ws_tb3)
+[//]: # ($ source devel/setup.sh)
+[//]: # ($ export TURTLEBOT3_MODEL=waffle_pi)
 
 The simulator allows you to see the output of your program.
 
