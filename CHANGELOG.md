@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 
+### ToDo
+- remove useless graph frontend webpage
+
 ## [1.0.0] - 2023-04-26
 
 First working release

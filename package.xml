@@ -4,7 +4,7 @@
   <version>1.0.0</version>
   <description>A ROS package that simplifies robot interaction using web interfaces</description>
 
-  <maintainer>Dominik Grzelak</maintainer>
+  <maintainer email="dominik.grzelak@web.de">Dominik Grzelak</maintainer>
 
   <!-- original maintainers -->
   <maintainer email="cosmo@dabitindustries.com">Cosmo Borsky</maintainer>

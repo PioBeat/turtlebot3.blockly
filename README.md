@@ -81,10 +81,12 @@ $ sudo apt install ros-noetic-turtlebot3
 BTB3 is the web-based editor to visually programm the TB3 via ROS using graphical elements. It can be installed as follows:
 
 ```shell
+# Preparing the workspace
 $ mkdir -p ~/blockly_ws/src
 $ cd ~/blockly_ws/src
 $ git clone https://github.com/PioBeat/turtlebot3.blockly
-
+$ mv turtlebot3.blockly turtlebot3_blockly
+# Installing the package
 $ cd ~/blockly_ws
 $ catkin_make_isolated -j2 --pkg turtlebot3_blockly --install
 ```
