@@ -1,11 +1,15 @@
 <?xml version="1.0"?>
 <package>
   <name>turtlebot3_blockly</name>
-  <version>0.1.0</version>
+  <version>1.0.0</version>
   <description>A ROS package that simplifies robot interaction using web interfaces</description>
 
+  <maintainer>Dominik Grzelak</maintainer>
+
+  <!-- original maintainers -->
   <maintainer email="cosmo@dabitindustries.com">Cosmo Borsky</maintainer>
   <maintainer email="aravind@dabitindustries.com">Aravind Krishnan</maintainer>
+
 
   <license>GPLv3</license>
 
